@@ -99,7 +99,7 @@ const STEPS: Step[] = [
 export default function HowItWorksSection() {
   return (
     <section
-      className="bg-amber-50 py-16 px-4"
+      className="bg-slate-50 py-16 px-4"
       aria-labelledby="how-it-works-heading"
     >
       <div className="max-w-4xl mx-auto">
@@ -120,16 +120,16 @@ export default function HowItWorksSection() {
               key={step.title}
               className="flex flex-col items-center text-center sm:items-start sm:text-left"
             >
-              <div className="w-12 h-12 rounded-2xl bg-orange-500 text-white flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-2xl bg-green-500 text-white flex items-center justify-center mb-4">
                 {step.icon}
               </div>
-              <p className="text-xs font-semibold text-orange-500 uppercase tracking-wider mb-1">
+              <p className="text-xs font-semibold text-green-600 uppercase tracking-wider mb-1">
                 {step.stepLabel}
               </p>
-              <p className="text-base font-semibold text-stone-900 mb-1">
+              <p className="text-base font-semibold text-slate-900 mb-1">
                 {step.title}
               </p>
-              <p className="text-sm text-stone-500 leading-relaxed">{step.body}</p>
+              <p className="text-sm text-slate-500 leading-relaxed">{step.body}</p>
             </li>
           ))}
         </ol>

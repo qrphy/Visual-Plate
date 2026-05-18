@@ -29,6 +29,13 @@ describe("BadgePill", () => {
     expect(el).toHaveClass("text-stone-600");
   });
 
+  it("applies green classes when variant is green", () => {
+    render(<BadgePill label="Green" variant="green" />);
+    const el = screen.getByText("Green");
+    expect(el).toHaveClass("bg-green-100");
+    expect(el).toHaveClass("text-green-800");
+  });
+
   it("has base pill classes", () => {
     render(<BadgePill label="Base" />);
     const el = screen.getByText("Base");

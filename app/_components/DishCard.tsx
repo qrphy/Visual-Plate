@@ -40,7 +40,7 @@ export default function DishCard({
   const placeholderBg = imagePlaceholderBg ?? "bg-amber-100";
 
   return (
-    <article className="rounded-2xl overflow-hidden bg-white border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+    <article className="rounded-2xl overflow-hidden bg-white border border-slate-100 shadow-sm transition-all duration-200 hover:scale-[1.02] hover:shadow-xl">
       <div className="relative aspect-[4/3] w-full">
         {imageUrl ? (
           <Image

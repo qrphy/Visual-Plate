@@ -27,10 +27,10 @@ describe("Home page", () => {
 
   it("renders all 4 demo dishes", () => {
     render(<Home />);
-    expect(screen.getByText("Tonkotsu Ramen")).toBeInTheDocument();
-    expect(screen.getByText("Gyoza")).toBeInTheDocument();
-    expect(screen.getByText("Karaage")).toBeInTheDocument();
-    expect(screen.getByText("Matcha Ice Cream")).toBeInTheDocument();
+    expect(screen.getAllByText("Tonkotsu Ramen").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("Gyoza").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("Karaage").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("Matcha Ice Cream").length).toBeGreaterThanOrEqual(1);
   });
 
   it("renders social proof statistics", () => {

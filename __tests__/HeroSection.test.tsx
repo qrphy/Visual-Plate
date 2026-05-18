@@ -13,13 +13,20 @@ describe("HeroSection", () => {
   it("heading contains key text", () => {
     render(<HeroSection />);
     expect(
-      screen.getByText(/See every dish/, { exact: false })
+      screen.getByText(/See your food/, { exact: false })
     ).toBeInTheDocument();
   });
 
-  it("renders scan CTA link pointing to /upload", () => {
+  it("renders primary Take Photo CTA pointing to camera upload", () => {
     render(<HeroSection />);
-    const link = screen.getByRole("link", { name: /Scan your menu/i });
+    const links = screen.getAllByRole("link", { name: /Take Photo/i });
+    expect(links.length).toBeGreaterThanOrEqual(1);
+    expect(links[0]).toHaveAttribute("href", "/upload?mode=camera");
+  });
+
+  it("renders secondary Upload Photo CTA pointing to /upload", () => {
+    render(<HeroSection />);
+    const link = screen.getByRole("link", { name: /Upload Photo/i });
     expect(link).toHaveAttribute("href", "/upload");
   });
 

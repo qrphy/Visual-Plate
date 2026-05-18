@@ -7,7 +7,7 @@ const STATS = [
 export default function SocialProofStrip() {
   return (
     <div
-      className="bg-orange-500 py-6 px-4"
+      className="bg-slate-900 py-6 px-4"
       role="region"
       aria-label="Usage statistics"
     >

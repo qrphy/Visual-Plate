@@ -50,10 +50,18 @@ describe("CtaButton", () => {
     expect(btn).not.toHaveClass("w-full");
   });
 
-  it("has orange background class", () => {
-    render(<CtaButton label="Orange" />);
+  it("applies primary variant (green) by default", () => {
+    render(<CtaButton label="Primary" />);
     const btn = screen.getByRole("button");
-    expect(btn).toHaveClass("bg-orange-500");
+    expect(btn).toHaveClass("bg-green-500");
+  });
+
+  it("applies secondary variant (outlined dark)", () => {
+    render(<CtaButton label="Secondary" variant="secondary" />);
+    const btn = screen.getByRole("button");
+    expect(btn).toHaveClass("border-slate-900");
+    expect(btn).toHaveClass("text-slate-900");
+    expect(btn).not.toHaveClass("bg-green-500");
   });
 
   it("has rounded-full class", () => {
